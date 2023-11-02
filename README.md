@@ -37,30 +37,20 @@ limitations under the License.
 
 > Flatten a three-dimensional nested array according to a callback function.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/array-base-flatten3d-by
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var flatten3dBy = require( '@stdlib/array-base-flatten3d-by' );
+import flatten3dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-flatten3d-by@esm/index.mjs';
+```
+
+You can also import the following named exports from the package:
+
+```javascript
+import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-flatten3d-by@esm/index.mjs';
 ```
 
 #### flatten3dBy( x, shape, colexicographic, clbk\[, thisArg] )
@@ -118,7 +108,7 @@ var count = ctx.count;
 Flattens a three-dimensional nested array according to a callback function and assigns elements to a provided output array.
 
 ```javascript
-var Float64Array = require( '@stdlib/array-float64' );
+import Float64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-float64@esm/index.mjs';
 
 function scale( v ) {
     return v * 2;
@@ -163,10 +153,15 @@ y = flatten3dBy.assign( x, [ 2, 1, 2 ], true, out, 1, 0, scale );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var naryFunction = require( '@stdlib/utils-nary-function' );
-var abs = require( '@stdlib/math-base-special-abs' );
-var flatten3dBy = require( '@stdlib/array-base-flatten3d-by' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import naryFunction from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nary-function@esm/index.mjs';
+import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs';
+import flatten3dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-flatten3d-by@esm/index.mjs';
 
 var fcn = naryFunction( abs, 1 );
 
@@ -206,6 +201,10 @@ out = flatten3dBy( x, [ 4, 2, 2 ], false, fcn );
 
 out = flatten3dBy( x, [ 4, 2, 2 ], true, fcn );
 // returns [ 1, 5, 9, 13, 3, 7, 11, 15, 2, 6, 10, 14, 4, 8, 12, 16 ]
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -229,7 +228,7 @@ out = flatten3dBy( x, [ 4, 2, 2 ], true, fcn );
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
