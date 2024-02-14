@@ -44,13 +44,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import flatten3dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-flatten3d-by@esm/index.mjs';
+import flatten3dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-flatten3d-by@v0.2.0-esm/index.mjs';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-flatten3d-by@esm/index.mjs';
+import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-flatten3d-by@v0.2.0-esm/index.mjs';
 ```
 
 #### flatten3dBy( x, shape, colexicographic, clbk\[, thisArg] )
@@ -161,7 +161,7 @@ y = flatten3dBy.assign( x, [ 2, 1, 2 ], true, out, 1, 0, scale );
 
 import naryFunction from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-nary-function@esm/index.mjs';
 import abs from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@esm/index.mjs';
-import flatten3dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-flatten3d-by@esm/index.mjs';
+import flatten3dBy from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-flatten3d-by@v0.2.0-esm/index.mjs';
 
 var fcn = naryFunction( abs, 1 );
 
