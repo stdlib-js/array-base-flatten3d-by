@@ -37,32 +37,38 @@ limitations under the License.
 
 > Flatten a three-dimensional nested array according to a callback function.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/array-base-flatten3d-by
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var flatten3dBy = require( '@stdlib/array-base-flatten3d-by' );
+flatten3dBy = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-flatten3d-by@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var flatten3dBy = require( 'path/to/vendor/umd/array-base-flatten3d-by/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-flatten3d-by@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.flatten3dBy;
+})();
+</script>
 ```
 
 #### flatten3dBy( x, shape, colexicographic, clbk\[, thisArg] )
@@ -165,10 +171,15 @@ y = flatten3dBy.assign( x, [ 2, 1, 2 ], true, out, 1, 0, scale );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var naryFunction = require( '@stdlib/utils-nary-function' );
-var abs = require( '@stdlib/math-base-special-abs' );
-var flatten3dBy = require( '@stdlib/array-base-flatten3d-by' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/utils-nary-function@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-abs@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-flatten3d-by@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 var fcn = naryFunction( abs, 1 );
 
@@ -208,6 +219,11 @@ out = flatten3dBy( x, [ 4, 2, 2 ], false, fcn );
 
 out = flatten3dBy( x, [ 4, 2, 2 ], true, fcn );
 // returns [ 1, 5, 9, 13, 3, 7, 11, 15, 2, 6, 10, 14, 4, 8, 12, 16 ]
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -302,7 +318,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/array/base/flatten3d]: https://github.com/stdlib-js/array-base-flatten3d
+[@stdlib/array/base/flatten3d]: https://github.com/stdlib-js/array-base-flatten3d/tree/umd
 
 <!-- </related-links> -->
 
