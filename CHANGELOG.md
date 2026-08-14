@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-07-31)
+## Unreleased (2026-08-14)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`513eef6`](https://github.com/stdlib-js/stdlib/commit/513eef6f9c2c70bff4dc3c0a719d4c6dbfe2e8a4) - **docs:** add missing space and fix punctuation [(#14226)](https://github.com/stdlib-js/stdlib/pull/14226) _(by Philipp Burckhardt)_
 -   [`00885d3`](https://github.com/stdlib-js/stdlib/commit/00885d3e6afd8118ce2b6e5f7a1c544d5b6d4ffb) - **bench:** refactor to use string interpolation in `array` [(#11411)](https://github.com/stdlib-js/stdlib/pull/11411) _(by Karan Anand, Athan Reines)_
 
 </details>
@@ -24,10 +25,11 @@
 
 ### Contributors
 
-A total of 2 people contributed to this release. Thank you to the following contributors:
+A total of 3 people contributed to this release. Thank you to the following contributors:
 
 -   Athan Reines
 -   Karan Anand
+-   Philipp Burckhardt
 
 </section>
 
